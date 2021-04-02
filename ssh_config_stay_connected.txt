@@ -1,0 +1,28 @@
+My ssh connections were idle and terminated very quickly, after 1-2 min of inactivity. I fixed this by editing "ssh_config" file in local computer
+
+
+before editing, my ssh_config read:
+```
+Host *
+        SendEnv LANG LC_*
+```
+
+nano /etc/ssh/ssh_config
+
+"permission denied". Will need sudo to edit.
+
+sudo nano /etc/ssh/ssh_config
+
+# I then added these two lines:
+
+```
+Host *
+        SendEnv LANG LC_*
+        ServerAliveInterval 60
+        ServerAliveCountMax 2
+```
+
+# ServerAliveInterval 60, is sending a "package" to the remote server, every 60 second. This is checking that the server still there.
+# I set it to 60 seconds (number will always be in seconds). If it still disconnects, then you need to dial this number down still the connection is stable. 
+
+# ServerAliveCountMax 2, is telling ssh, how many times to send the package. This case it will try twice. If doesn't get a response, it will disconnect.
