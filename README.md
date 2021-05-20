@@ -6,7 +6,7 @@ Contact: Eric Garcia, e1garcia@odu.edu
 
 ---
 
-### Multi_FASTQC.sh
+### [Multi_FASTQC.sh](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/Multi_FASTQC.sh)
 
 Simple script to create sequence quality reports ([FASTQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) and [MultiQC](https://multiqc.info/)) in parallel with a single command on a remote HPC
 
@@ -21,7 +21,7 @@ Open script for more details
 
 ---
 
-### base_calculator.sh
+### [base_calculator.sh](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/base_calculator.sh)
 
 This script counts the number of each base in DNA fragments from single-digest Sbf1 RADseq, pair-end fq.gz files according to the window size and region determined by user
 
@@ -47,7 +47,7 @@ Open script for more details
 
 ---
 
-### base_proportions.R
+### [base_proportions.R](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/base_proportions.R)
 
 R script to calculate, and plot, base pair proportions and mean base pair proportion of DNA fragments position by position
 
@@ -57,7 +57,7 @@ Open script for more details
 
 ---
 
-### read_calculator.sh
+### [read_calculator.sh](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/read_calculator.sh)
 
 `read_caltulator.sh` counts the number of reads in compressed (default) or uncompressed FQ files (open script for details).
 
@@ -79,7 +79,7 @@ Output:
 
 ---
 
-### motif_calculator.sh
+### [motif_calculator.sh](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/motif_calculator.sh)
 
 `motif_calculator.sh` identifies and counts repeated motifs in compressed or uncompressed FQ files
 
@@ -109,7 +109,7 @@ Open script for details
 
 ---
 
-### fq_repeat_cleaner.sh
+### [fq_repeat_cleaner.sh](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/fq_repeat_cleaner.sh)
 
 `fq_repeat_cleaner.sh` removes sequences with repeated motifs at the beginning of the read in compressed or uncompressed FQ files
 
@@ -130,7 +130,7 @@ Open script for details
 
 ---
 
-### concat_fqFiles_diffLanes.sh
+### [concat_fqFiles_diffLanes.sh](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/concat_fqFiles_diffLanes.sh)
 
 Simple script to concatenate files of the same individuals but from multiple sequencing lanes
 
@@ -138,19 +138,19 @@ Usage: Open the script can enter your files' read and lane info
 
 ---
 
-### subsetting_VCF_files.dat
+### [subsetting_VCF_files.dat](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/subsetting_VCF_files.dat)
 
 User friendly list of steps and code to successfully subset VCF files while maintaining functionality
 
 ---
 
-### ssh_config_stay_connected.txt
+### [ssh_config_stay_connected.txt](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/ssh_config_stay_connected.txt)
 
 Use this code to maintain a stable ssh connection if your sessions are becoming idle and/or terminated very quickly, after 1-2 min of inactivity.
 
 ---
 
-### mapDamage_tutorial.md
+### [mapDamage_tutorial.md](https://github.com/ericgarciaresearch/Scrips_and_code/blob/main/mapDamage_tutorial.md)
 
 Instructions on how to run mapDamage on Wahab ODU's cluster. See file for details
 
