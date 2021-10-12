@@ -2,9 +2,8 @@
 
 #SBATCH --job-name=Multi_fastqc
 #SBATCH -o Multi_fastqc-%j.out
-#SBATCH --time=144:00:00
 #SBATCH -p main
-#SBATCH -c 4
+#SBATCH -c 40
 #SBATCH --mail-user=<your_email>
 #SBATCH --mail-type=begin
 #SBATCH --mail-type=END
@@ -49,12 +48,12 @@
 #### Script
 
 #run fastqc in parallel 
-ls *$1 | parallel "crun fastqc {}" &&
+ls *$1 | parallel -kj 40 "crun fastqc {}" &&
 
 # run multiqc with specific report and subdirectory names
 crun multiqc . -n multiqc_report_$1.html -o Multi_FASTQC &&
 
 # move fastqc files to new subdirectory
-ls *fastqc.html | parallel "mv {} Multi_FASTQC" &&
-ls *fastqc.zip | parallel "mv {} Multi_FASTQC"
+ls *fastqc.html | parallel -kj40 "mv {} Multi_FASTQC" &&
+ls *fastqc.zip | parallel -kj 40 "mv {} Multi_FASTQC"
 
