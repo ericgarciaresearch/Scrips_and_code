@@ -2,7 +2,6 @@
 
 #SBATCH --job-name=base_calculator
 #SBATCH -o base_calculator-%j.out
-#SBATCH --time=144:00:00
 #SBATCH -p main
 #SBATCH -c 40
 #SBATCH --mail-user=<youremail>
